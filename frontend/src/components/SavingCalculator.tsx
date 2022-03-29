@@ -1,8 +1,6 @@
 import React, {Dispatch, SetStateAction, useEffect, useState} from 'react'
-import { Alert, AlertIcon, ChakraProvider, extendTheme, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper } from '@chakra-ui/react'
-import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark, Tooltip, FormLabel} from '@chakra-ui/react'
+import { Alert, AlertIcon, extendTheme, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
-import DefaultLayout from '../components/layouts/Default'
 import LineChart from '../components/LineChart'
 import theme from '../theme'
 import MySlider from './SliderCalc'
@@ -11,10 +9,8 @@ import moment from 'moment'
  
 const defaultTheme = extendTheme(theme)
 
-// Note: This is just for example purposes
-// should be replaced with real data from the server
+// Initial graph state
 const tempData = [100, 150, 180, 210, 240, 350]
-
 
 function handleChange(inputs:Object, setChartData:Dispatch<SetStateAction<any>>){
     const requestOptions = {

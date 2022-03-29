@@ -1,9 +1,8 @@
-import React, {Dispatch, SetStateAction, useState} from 'react'
+import React, {} from 'react'
 import './App.css'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import DefaultLayout from './components/layouts/Default'
-import LineChart from './components/LineChart'
 import theme from './theme'
 import SavingsCalculator from './components/SavingCalculator'
  
