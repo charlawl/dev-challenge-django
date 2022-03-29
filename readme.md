@@ -1,7 +1,23 @@
 # Finimize dev challenge
 
-This repo is intended to be forked and uploaded to your own Github account in
-order to form the submission for the challenge. Once cloned, it will give you a basic server with a React app, so you don't have to spend time writing boilerplate code. Feel free to make any changes you wish - the existing code is purely intended to get you going faster.
+## Solution
+This app will show the amount saved over the course of 50 years, changing the following parameters:
+- Initial amount
+- Monthly depoist
+- Yearly interest rate
+
+### Further work
+#### Multiple API calls (Slider)
+Fixing the multiple API calls on the slider `onChange`. I used `onChangeEnd` initially as documented in the Chakra UI docs but unfortunately this caused issues with state updates, whereby the state was reset to the initial placeholder values when the slider was updated. Tried the following but didn't work:
+
+```
+onChange={useCallback((e) => {
+                onChange(e)
+                setSliderValue(e)
+            },[])}
+```
+#### Testing
+As I have no experience with React I know that this solution lacks robust testing. I would love to discuss testing strategy in React further!
 
 ## Python & Django setup
 
