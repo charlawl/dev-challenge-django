@@ -1,5 +1,5 @@
 import React, {Dispatch, SetStateAction, useEffect, useState} from 'react'
-import { ChakraProvider, extendTheme, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper } from '@chakra-ui/react'
+import { Alert, AlertIcon, ChakraProvider, extendTheme, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper } from '@chakra-ui/react'
 import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark, Tooltip, FormLabel} from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import DefaultLayout from '../components/layouts/Default'
@@ -81,6 +81,13 @@ function SavingsCalculator() {
                 <Container pt={5}>
                 <h2>Interest Rate (yearly)</h2>
                 <MySlider max={50} onChange={(e:number) => {setInputs({ ...inputs, interest_rate: e })}}/>
+                </Container>
+
+                <Container pt={5}>
+                <Alert status='info'>
+                <AlertIcon />
+                    You would have saved  in 50 years!
+                </Alert>
                 </Container>
             </Container>    
             </div>
