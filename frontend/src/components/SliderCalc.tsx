@@ -11,6 +11,7 @@ function MySlider({onChange, max} : {onChange:ChangeFunction, max:number}){
         <Slider
             id='slider'
             defaultValue={5}
+            step={0.25}
             min={0}
             max={max}
             colorScheme='teal'

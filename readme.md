@@ -6,6 +6,9 @@ This app will show the amount saved over the course of 50 years, changing the fo
 - Monthly depoist
 - Yearly interest rate
 
+## Working Solution
+![Alt Text](img/SavingsCalc.gif)
+
 ### Further work
 #### Multiple API calls (Slider)
 Fixing the multiple API calls on the slider `onChange`. I used `onChangeEnd` initially as documented in the Chakra UI docs but unfortunately this caused issues with state updates, whereby the state was reset to the initial placeholder values when the slider was updated. Tried the following but didn't work:
