@@ -16,6 +16,7 @@ const LineChart = ({ xAxisData, yAxisData, title, xLabel, yLabel }: Props) => {
     }
 
     const options = {
+        tooltips: false,
         title: {
             display: !!title,
             text: title,
@@ -26,12 +27,17 @@ const LineChart = ({ xAxisData, yAxisData, title, xLabel, yLabel }: Props) => {
                 {
                     scaleLabel: { display: !!yLabel, labelString: yLabel },
                     gridlines: { display: false },
+                    afterFit: (scaleInstance:any) => {
+                        scaleInstance.width =90; // sets the width to 100px
+                      }
                 },
             ],
             xAxes: [
                 {
                     scaleLabel: { display: !!xLabel, labelString: xLabel },
-                    ticks: { display: true },
+                    ticks: { 
+                        display: true,
+                   },
                 },
             ],
         },
@@ -56,3 +62,4 @@ const LineChart = ({ xAxisData, yAxisData, title, xLabel, yLabel }: Props) => {
 }
 
 export default LineChart
+

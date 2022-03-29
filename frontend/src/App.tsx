@@ -15,7 +15,7 @@ function App() {
             {/* We've just bundled everything into one file here to 
             get you started!*/}
             <DefaultLayout>
-                <Container pt={6}>
+                <Container pt={8}>
                 <SavingsCalculator/>
                 </Container>
             </DefaultLayout>

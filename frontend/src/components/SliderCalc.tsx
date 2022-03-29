@@ -14,9 +14,9 @@ function MySlider({onChange, max} : {onChange:ChangeFunction, max:number}){
             min={0}
             max={max}
             colorScheme='teal'
-            onChangeEnd={useCallback((e) => {
+            onChange={(e) => {
                 onChange(e)
-                setSliderValue(e)},[])}
+                setSliderValue(e)}}
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}       
             >
